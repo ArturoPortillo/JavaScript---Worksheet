@@ -81,3 +81,24 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        
+        max-width: 100vh;
+        font-size: 1.2rem;
+    }
+
+    #btn, #boton {
+        min-width: 350px;
+        min-height: 80px;
+        font-size: 2rem;
+    }
+}
