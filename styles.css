@@ -85,14 +85,14 @@ h2 {
 @media (max-width: 768px) {
 
     h1 {
-        font-size: 3rem;
-        display: flex;
-        justify-content: center;
+        font-size: 3rem; 
+        margin-left: 12rem;   
     }
 
     .container {
-        
-        max-width: 100vh;
+        width: 300px;
+        margin: 0;
+        margin-left: 2rem;
         font-size: 1.2rem;
     }
 
