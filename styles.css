@@ -1,0 +1,83 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    margin: 0 12rem 0 12rem;
+    }
+
+
+h1 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+span {
+    background-color: #f7df1e;
+    /* font-family:'Courier New', Courier, monospace; */
+    padding: 0.4rem;
+    border-radius: 10px;
+    margin-right: 10px;
+    }
+
+p {
+    margin-top: 10px;
+}
+
+p::before {
+    content: "Arturo's";
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    position: absolute;  
+    color: rgb(233, 231, 231);
+}
+
+h1::after {
+    content: '';
+    position:absolute;
+    margin-top: 95px;
+    border-bottom: crimson 1px solid;    
+    border-left:350px solid transparent;
+    border-right:350px solid transparent;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    padding: 0;
+}
+
+.exercise--1 {
+    margin-top: 3rem;
+}
+
+#btn, #boton {
+    background-color: #f7df1e;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    width: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.students {
+    border: 1px solid black;
+    width: 600px;
+    padding: 0.5em;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
