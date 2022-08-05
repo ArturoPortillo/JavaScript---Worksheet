@@ -1,4 +1,4 @@
-document.getElementById("boton").onclick = function() {runPrompt()};
+document.getElementById("btn").onclick = function() {runPrompt()};
 
             function runPrompt() {
 
