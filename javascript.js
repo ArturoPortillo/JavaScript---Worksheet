@@ -1,6 +1,6 @@
-document.getElementById("boton").onclick = function() {fun()};
+document.getElementById("boton").onclick = function() {runPrompt()};
 
-            function fun() {
+            function runPrompt() {
 
 
                 /* Creacion de clase con las propiedades que describen a un usuario */
@@ -67,6 +67,5 @@ document.getElementById("boton").onclick = function() {fun()};
                             else if (total < 1) 
                             console.log("No tienes dinero disponible.");  
                             break;            
-                            }; 
-}                       
-
+                            };                        
+                        }

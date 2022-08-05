@@ -61,7 +61,7 @@ h2 {
     margin-top: 3rem;
 }
 
-.btn, #boton {
+#btn, #boton {
     background-color: #f7df1e;
     color: black;
     font-weight: bolder;
@@ -71,15 +71,6 @@ h2 {
     padding: 1rem;
     margin: 1rem;
     font-size: 1.2rem;
-}
-
-.students {
-    border: 1px solid black;
-    width: 600px;
-    padding: 0.5em;
-    margin: 0.5rem;
-    display: flex;
-    justify-content: center;
 }
 
 @media (max-width: 768px) {
