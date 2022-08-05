@@ -61,7 +61,7 @@ h2 {
     margin-top: 3rem;
 }
 
-#btn, #boton {
+.btn, #boton {
     background-color: #f7df1e;
     color: black;
     font-weight: bolder;
@@ -97,7 +97,7 @@ h2 {
         font-size: 1.2rem;
     }
 
-    #btn, #boton {
+    .btn, #boton {
         min-width: 350px;
         min-height: 80px;
         font-size: 2rem;

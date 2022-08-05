@@ -1,6 +1,6 @@
-document.getElementById("button").onclick = function() {runPrompt()};
+document.getElementById("boton").onclick = function() {fun()};
 
-            function runPrompt() {
+            function fun() {
 
 
                 /* Creacion de clase con las propiedades que describen a un usuario */
