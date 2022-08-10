@@ -1,73 +1,109 @@
-document.getElementById("boton").onclick = function() {runPrompt()};
+const userData = []; 
 
-            function runPrompt() {
+/* Por los momentos me estaria complicando más hacer el proyecto con una clase, si quiero evaluar lo que ingresa el usuario para saber si en el nombre pone numeros y letras se me hace mas facil trabajar con un objeto y luego cargar ese objeto en un array por lo cual 'comento' el codigo de 'Class' */
+/* class User {
+    constructor(userName, lastName, income) {
+        this.userName  = userName.toUpperCase();
+        this.lastName  = lastName.toUpperCase();
+        this.income = income;
+        }
+    } */
+
+    let newName = prompt("Ingresa tu nombre: ")
+    let userlastName = prompt("Ingresa tu apellido: ")
+    let userIncome = parseFloat(prompt("Total de ingresos disponibles: "))
 
 
-                /* Creacion de clase con las propiedades que describen a un usuario */
-                class newUser {
-                    constructor(name, lastName, income) {
-                        this.name  = name.toUpperCase();
-                        this.lastName  = lastName.toUpperCase();
-                        this.income = income;
-                        }
-                }
+const newUser = {
+    userName: newName,
+    lastName: userlastName,
+    income: userIncome,
+}
 
-                /* Creacion de un Array donde cargamos los datos del usuario usando nuestra clase "newUser"*/
+console.log(newUser)
 
-                const userName = [];
-                userName.push(new newUser((prompt("Ingresa tu nombre: ")), (prompt("Ingresa tu apellido: ")), (parseFloat(prompt("Total de ingresos disponibles: ")))));
+userData.push(newUser)
 
-                console.log(userName)
+const validText = !/[^a-zA-Z]/.test.newName
 
-                /* El array pasaria a ser userName = [name: ,lastName: , income: ] */
+    console.log("El nombre a evaluar es "+newName)
+    
+    if (!/[^a-zA-Z]+$/.test.newName)        
+        console.log("El nombre de usuario es "+validText) 
 
-                /* Resultado esperado:
-                newUser
-                name: "ARTURO"
-                lastName: "PORTILLO"
-                income: 50000 ó el monto que ingresemos en el prompt
-                */
 
-                /* Declaramos variables */
 
-                let income = userName[0].income; /* Tomamos el valor de la propiedad "income" dentro del arreglo userName recorriendo el array con [0] */
-                let expense = 0;
-                let total = 0;
-                
-                    function dec(income, expense) { 
-                        return total =  income - expense;
-                    }
-                    
-                /* Luego nuestro ciclo se ejecuta... */
+
+/*     const regexText = !/^[^a-zA-Z]*$/;
+    const regexValue = /[^0-9]+$/i
+
+    const validText1 = !/[^a-zA-Z]+$/.test(user1[0]);
+    const validText2 = !/[^a-zA-Z]+$/.test(user1[1])
+    const validText3 = !/[^a-zA-Z]+$/.test(user1[2])
+    console.log(validText1)
+    console.log(validText2)
+    console.log(validText3) */
+
+/* while ((regexText == true) && (regexValue == true)) {
+        if (regexText.test(userName) && regexText.test(lastName) && regexValue.test(income)) {
+            userData.push(user1)
+            break;
+        } else {
+            console.log("Datos ingresados invalidos.")
+        }
+    }
+ */
+    console.log(userData)
+    console.log("Usuarios registrados: "+userData.length)
                                 
-                for (let i = 0; i < 1 ; i--) {
-                    
-                            if (isNaN(income)) {
-                                console.log("Ingresa un monto válido.");
-                            break;
-                            } else {
-                                console.log("Tienes " + income + " pesos disponibles.");
-                                }
-                
-                    let expense = parseFloat(prompt("Ingresa un gasto: "));
-                        if (isNaN(expense) || expense > income) {
-                            console.log("Ingresa un monto válido.");
-                        break;
-                        }
-                        else {
-                            console.log("Gastas " + expense + " pesos");
-                            }   
-                                        
-                    dec(income,expense);
-                        console.log("Te quedan " + total + " pesos disponibles.")
-                            if (total >= 1) {   
-                            income = income - expense;  
-                            continue;
-                            }
-                            else if (total < 1) 
-                            console.log("No tienes dinero disponible.");  
-                            break;            
-                            };                        
-                        }
 
-                        
+/* El array pasaria a ser userName = [name: ,lastName: , income: ] */
+/* Resultado esperado:
+    newUser
+    name: "ARTURO"
+    lastName: "PORTILLO"
+    income: 50000 ó el monto que ingresemos en el prompt
+*/
+
+/* Declaramos variables */
+
+    let income = userData[0].income; /* Tomamos el valor de la propiedad "income" dentro del arreglo userName recorriendo el array con [0] */ 
+    let expense = 0;
+    let total = 0; 
+                
+        function dec(income, expense) { 
+            return income - expense;
+            }
+/* Luego nuestro ciclo se ejecuta... */
+
+while (total >= 0) {
+        
+        if (isNaN(income) || income <= 0) {
+            console.log("Ingresa un monto válido.");
+            break;
+            } else {
+                console.log("Tienes " + income + " pesos disponibles.");
+                }
+        
+            expense = parseFloat(prompt("Ingresa un gasto: "));
+                if (isNaN(expense) || expense > income) {
+                    console.log("Ingresa un monto válido.");
+                break;
+                }
+                else {
+                    console.log("Gastas " + expense + " pesos");
+                }   
+
+            total = dec(income,expense);
+                console.log("Te quedan " + total + " pesos disponibles.")   
+                    
+            if (total >= 1) {   
+                income = income - expense;   
+                continue;                    
+                }                         
+                else {
+                console.log("No tienes dinero disponible.")  
+                break;
+                }         
+}
+ 
