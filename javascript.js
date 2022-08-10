@@ -1,4 +1,3 @@
-const userData = []; 
 
 /* Por los momentos me estaria complicando más hacer el proyecto con una clase, si quiero evaluar lo que ingresa el usuario para saber si en el nombre pone numeros y letras se me hace mas facil trabajar con un objeto y luego cargar ese objeto en un array por lo cual 'comento' el codigo de 'Class' */
 /* class User {
@@ -8,7 +7,9 @@ const userData = [];
         this.income = income;
         }
     } */
-
+    
+    const userData = []; 
+    
     let newName = prompt("Ingresa tu nombre: ")
     let userlastName = prompt("Ingresa tu apellido: ")
     let userIncome = parseFloat(prompt("Total de ingresos disponibles: "))
@@ -27,32 +28,10 @@ userData.push(newUser)
 const validText = !/[^a-zA-Z]/.test.newName
 
     console.log("El nombre a evaluar es "+newName)
-    
+
     if (!/[^a-zA-Z]+$/.test.newName)        
         console.log("El nombre de usuario es "+validText) 
 
-
-
-
-/*     const regexText = !/^[^a-zA-Z]*$/;
-    const regexValue = /[^0-9]+$/i
-
-    const validText1 = !/[^a-zA-Z]+$/.test(user1[0]);
-    const validText2 = !/[^a-zA-Z]+$/.test(user1[1])
-    const validText3 = !/[^a-zA-Z]+$/.test(user1[2])
-    console.log(validText1)
-    console.log(validText2)
-    console.log(validText3) */
-
-/* while ((regexText == true) && (regexValue == true)) {
-        if (regexText.test(userName) && regexText.test(lastName) && regexValue.test(income)) {
-            userData.push(user1)
-            break;
-        } else {
-            console.log("Datos ingresados invalidos.")
-        }
-    }
- */
     console.log(userData)
     console.log("Usuarios registrados: "+userData.length)
                                 
@@ -106,4 +85,3 @@ while (total >= 0) {
                 break;
                 }         
 }
- 
