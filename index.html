@@ -11,16 +11,29 @@
 </head>
 <body>
     <div class="container">
-            <div class="title">
-            <h1><span>JavaScript</span> <p>Worksheet</p></h1>
+        <div class="userBlock">   
+            <div>
+                <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-user-essential-collection-bearicons-gradient-bearicons.png" alt="Add" type="button" value="" class="userBtn" onclick="changeUser()">
+            </div>                 
+                <h1 class="userData">Nombre de usuario</h1>
+        </div>
+        <div class="balanceBlock">      
+            <div>          
+                <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/1A1A1A/external-plus-essential-collection-bearicons-gradient-bearicons.png" alt="Add" type="button" value="+" class="balanceBtn" onclick="addBalance()">
             </div>
-        <h2>Consigna: Ingresa tu nombre, apellido e ingresos disponibles, luego ingresa un gasto hasta llegar a 0. <br><br>
-        </h2>
-        <!-- 
-        <div class="exercise--1"><b>let income = parseInt(prompt(&quot;Total de ingresos disponibles: &quot;));</b><br>let expense = 0;<br>let total = 0;&nbsp;<br>&nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp;function dec(income, expense) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return total = &nbsp;income - expense;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br><b>for (let i= 0; i &lt; 1 ; i--) {</b><br>&nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; if (isNaN(income)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Ingresa un monto v&aacute;lido.&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Tienes &quot; + income + &quot; pesos disponibles.&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; let expense = parseInt(prompt(&quot;Ingresa un gasto: &quot;));<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (isNaN(expense) || expense &gt; income) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Ingresa un monto v&aacute;lido.&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Gastas &quot; + expense + &quot; pesos&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp;dec(income,expense);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;Te quedan &quot; + total + &quot; pesos disponibles.&quot;)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (total &gt;= 1) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; income = income - expense;<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;continue;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (total &lt; 1)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(&quot;No tienes dinero disponible.&quot;);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}&nbsp;</div> -->
-
-            <input id="boton" type = "button" value = "Run Prompt #2" onclick = "" class="btn"> 
+            <p>$<p class="currentBalance"></p></p>
+            <div>
+                <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/1A1A1A/external-view-essential-collection-bearicons-gradient-bearicons-1.png" alt="Hide" class="hideBalance">
+            </div>        
+        </div>
     </div>
+    <div class="expenseBlock">
+        <div>
+            <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-bill-essential-collection-bearicons-gradient-bearicons.png" alt="AddExpense" type="button" value="" class="expenseBtn" onclick="addExpense()">
+        </div>
+        <p>-$<p class="expense"></p></p>
+    </div> 
+    <div>
 <script src="javascript.js"></script>
 </body>
 </html>

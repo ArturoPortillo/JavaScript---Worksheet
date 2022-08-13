@@ -7,7 +7,7 @@
         this.income = income;
         }
     } */
-    
+
     const userData = []; 
 
     let newName = prompt("Ingresa tu nombre: ")
@@ -17,9 +17,6 @@
     const validText = !/[^a-zA-Z]/.test(newName)    
     const validText2 = !/[^a-zA-Z]/.test(userlastName)
     const validNumber = !/[^\d+$]/.test(userIncome)
-
-
-
 
 const newUser = {
     userName: newName,
@@ -94,3 +91,28 @@ while (total >= 0 && !/[^a-zA-Z]+$/.test(newName) && !/[^a-zA-Z]+$/.test(userlas
         break;
         }         
 }
+
+
+let displayUser = document.querySelector(".userData");
+let displayExpense = document.querySelector(".expense");
+let balance = document.querySelector(".currentBalance");
+
+displayUser.innerText = newName+" "+userlastName;
+displayExpense.innerText = expense;
+
+function addBalance() {
+    userIncome = parseFloat(prompt("Total de ingresos disponibles: ")) 
+    balance.innerText = userIncome;
+} 
+
+function addExpense() {
+    expense = parseFloat(prompt("Ingresa un gasto: "));
+    displayExpense.innerText = expense;
+    balance.innerText = userIncome - expense;
+} 
+
+function changeUser() {
+    let newName = prompt("Ingresa tu nombre: ")
+    let userlastName = prompt("Ingresa tu apellido: ")
+    displayUser.innerText = newName+" "+userlastName;
+} 
