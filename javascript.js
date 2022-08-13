@@ -10,9 +10,9 @@
 
     const userData = []; 
 
-    let newName = prompt("Ingresa tu nombre: ")
-    let userlastName = prompt("Ingresa tu apellido: ")
-    let userIncome = parseFloat(prompt("Total de ingresos disponibles: ")) 
+    let newName = prompt("Ingresa tu nombre: ");
+    let userlastName = prompt("Ingresa tu apellido: ");
+    let userIncome = parseFloat(prompt("Total de ingresos disponibles: "));
     
     const validText = !/[^a-zA-Z]/.test(newName)    
     const validText2 = !/[^a-zA-Z]/.test(userlastName)
